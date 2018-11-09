@@ -18,9 +18,9 @@ public class DistancebasedAdaptiveWatermarkEstimator extends AdaptiveWatermarkEs
         private int globalTotalEventCount=0;
 
 	private boolean watermarkDistanceIncreased=false;
-	private final long DEFAULT_WATER_MARK_DISTANCE = 1;
+	private static final long DEFAULT_WATER_MARK_DISTANCE = 1000;
 	private double distanceChangeRate = 0.1;
-	private long watermarkDistanceMax = 1000;
+	private long watermarkDistanceMax = 0;
 	public static final String ANSI_RED = "\u001B[31m";
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_GREEN = "\u001B[32m";
@@ -39,7 +39,7 @@ public class DistancebasedAdaptiveWatermarkEstimator extends AdaptiveWatermarkEs
 	}
 	public DistancebasedAdaptiveWatermarkEstimator(double pSensitivityChangeRate, double pLateArrivalThreshold)
 	{
-		this(1,1,pSensitivityChangeRate, pLateArrivalThreshold);
+		this(1,DEFAULT_WATER_MARK_DISTANCE,pSensitivityChangeRate, pLateArrivalThreshold);
 	}
 	public DistancebasedAdaptiveWatermarkEstimator(double sensitivity, long watermarkDistance) {
 		super(sensitivity);
@@ -84,6 +84,7 @@ public class DistancebasedAdaptiveWatermarkEstimator extends AdaptiveWatermarkEs
 			if (((double)lateEventsCountPerChunk/totalEventCountPerChunk) == 0)//  the average of late arrival ratio
 			{
 				// Another idea is to increase the watermark distance by the average deviation from the buffer!
+
 				watermarkDistance =  Math.max((long)(watermarkDistance/distanceChangeRate),watermarkDistanceMax);
 //				watermarkDistance = (long)Math.ceil(watermarkDistance + Math.abs(meanBeforeChange -  adwin.getEstimation()));
 //				watermarkDistance = (long)Math.ceil(watermarkDistance + (meanBeforeChange -  adwin.getEstimation()));

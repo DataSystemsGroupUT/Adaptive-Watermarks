@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ef34618-ad9e-4eb9-b8c1-0db4dd7ef6a6" name="Default" comment="" />
+    <list default="true" id="5ef34618-ad9e-4eb9-b8c1-0db4dd7ef6a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/AnalysisResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/AnalysisResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,44 +60,118 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="1030581298">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="3029" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="3029" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="14" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="210" column="25" lean-forward="true" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
+            <state relative-caret-position="304">
+              <caret line="587" lean-forward="true" selection-start-line="587" selection-end-line="587" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#AverageFunction#0;class#StreamingJob#0" />
-                <element signature="method#map#0;class#AverageFunction#0;class#StreamingJob#0" />
-                <element signature="method#open#0;class#AverageFunction#0;class#StreamingJob#0" />
-                <element signature="method#apply#0;class#AverageTemperatureFunction#0;class#StreamingJob#0" />
-                <element signature="class#CounterFunction3#0;class#StreamingJob#0" />
-                <element signature="class#CounterFunction2#0;class#StreamingJob#0" />
-                <element signature="e#13499#14368#0" expanded="true" />
-                <element signature="e#14367#14368#0" expanded="true" />
-                <element signature="method#jobForComparisonWithOtherEngines#0;class#StreamingJob#0" />
-                <element signature="method#jobForTestingCountWindow#0;class#StreamingJob#0" />
-                <element signature="method#jobForTestingSessionWindowWithOutOfOrder#0;class#StreamingJob#0" />
-                <element signature="method#jobForTestingTimeWindowWithOutOfOrder#0;class#StreamingJob#0" />
-                <element signature="e#21848#22717#0" expanded="true" />
-                <element signature="e#22716#22717#0" expanded="true" />
-                <marker date="1541401421508" expanded="true" signature="11343:11568" ph="..." />
+                <element signature="e#3526#4857#0" />
+                <element signature="e#3701#4303#0" />
+                <element signature="e#4313#4851#0" />
+                <element signature="e#5012#5590#0" />
+                <element signature="e#6161#7127#0" />
+                <element signature="e#7133#7784#0" />
+                <element signature="e#7790#9058#0" />
+                <element signature="e#16210#17079#0" expanded="true" />
+                <element signature="e#17078#17079#0" expanded="true" />
+                <element signature="e#15803#16955#0" />
+                <element signature="e#16961#18111#0" />
+                <element signature="e#18117#19327#0" />
+                <element signature="e#19333#20441#0" />
+                <element signature="e#24820#25689#0" expanded="true" />
+                <element signature="e#25688#25689#0" expanded="true" />
+                <marker date="1541755807360" expanded="true" signature="10140:10365" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="10" column="96" lean-forward="true" selection-start-line="10" selection-start-column="96" selection-end-line="11" selection-end-column="110" />
+            <state relative-caret-position="102">
+              <caret line="78" column="50" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3116#3117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="171" column="63" selection-start-line="171" selection-start-column="63" selection-end-line="171" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1921">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="43" column="114" selection-start-line="43" selection-start-column="114" selection-end-line="43" selection-end-column="114" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/AnalysisResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="79" column="89" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -113,10 +198,15 @@
       <find>Arrival o</find>
       <find>Arrival of</find>
       <find>\</find>
+      <find>\&quot;</find>
+      <find>;R</find>
     </findStrings>
     <replaceStrings>
       <replace>\\</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -134,21 +224,22 @@
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/triggers/EarlyCountEventTimeTrigger.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSource.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJobTestWindowingSemantics.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/TimeLagWatermarkGenerator.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/BoundedOutOfOrdernessGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/BoundedOutOfOrdernessWatermarkGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/WatermarkEstimator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/BoundedOutOfOrderWatermarkGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/events/SimpleEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/counters/CounterFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/AnalysisResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java" />
       </list>
     </option>
   </component>
@@ -191,17 +282,90 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="628" />
-    <option name="y" value="490" />
-    <option name="width" value="823" />
-    <option name="height" value="463" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1206" />
+    <option name="y" value="45" />
+    <option name="width" value="1029" />
+    <option name="height" value="579" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dsg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dsg" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dsg" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adaptive-Watermarks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dsg" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -213,106 +377,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dsg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dsg" type="462c0819:PsiDirectoryNode" />
-              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dsg" type="462c0819:PsiDirectoryNode" />
-              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
-              <item name="flink" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dsg" type="462c0819:PsiDirectoryNode" />
-              <item name="adaptivewatermark" type="462c0819:PsiDirectoryNode" />
-              <item name="flink" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dsg" type="462c0819:PsiDirectoryNode" />
-              <item name="resultanalysis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ee.dsg.adaptivewatermark.flink" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaptiveWaternarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541401603139" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Heidi/PSGD" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541801372883" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -322,6 +393,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ee.ut.cs.dsg.adaptivewatermark" />
       <recent name="ee.ut.cs.dsg.adaptivewatermark.flink.source" />
     </key>
   </component>
@@ -337,7 +409,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ResultAnalyzer">
+  <component name="RunManager" selected="Application.StreamingJob">
     <configuration name="ResultAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ee.ut.cs.dsg.resultanalysis.ResultAnalyzer" />
       <module name="ee.dsg.adaptivewatermark.flink" />
@@ -355,7 +427,7 @@
     <configuration name="StreamingJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ee.ut.cs.dsg.adaptivewatermark.flink.StreamingJob" />
       <module name="ee.dsg.adaptivewatermark.flink" />
-      <option name="PROGRAM_PARAMETERS" value="--input &quot;C:\\Work\\Data\\Tromso2013Milliseconds.txt&quot; --output &quot;outputAdaptiveWatermark.txt&quot; --adaptive true --allowedLateness 2000 --oooThreshold 0.01 --sensitivity 0.01 --sensitivityChangeRate 1.0 --windowWidth 1000 --period 2000" />
+      <option name="PROGRAM_PARAMETERS" value="--input &quot;C:\\Work\\Data\\Tromso2013Milliseconds.txt&quot; --output &quot;outputAdaptiveWatermark.txt&quot; --adaptive true --allowedLateness 100 --oooThreshold 1.1 --sensitivity 0.01 --sensitivityChangeRate 1.0 --windowWidth 1000 --period 10" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ee.ut.cs.dsg.adaptivewatermark.flink.*" />
@@ -459,8 +531,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ResultAnalyzer" />
         <item itemvalue="Application.StreamingJob" />
+        <item itemvalue="Application.ResultAnalyzer" />
         <item itemvalue="Maven.ee.dsg.adaptivewatermark.flink [package]" />
         <item itemvalue="Maven.ee.dsg.adaptivewatermark.flink [clean]" />
         <item itemvalue="Application.StreamingJobTestWindowingSemantics" />
@@ -492,10 +564,10 @@
     <option name="totallyTimeSpent" value="75017000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="503" y="392" width="658" height="370" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.56688964" />
-      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" visible="true" weight="0.56688964" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4912892" weight="0.19194631" />
+      <window_info id="Structure" order="1" sideWeight="0.5087108" side_tool="true" weight="0.23624161" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -503,12 +575,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930514" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995005" weight="0.7679325" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4995005" visible="true" weight="0.33617023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997986" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004995" side_tool="true" weight="0.32930514" />
@@ -521,7 +593,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.23020135" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3080537" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,23 +618,34 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <condition expression="((double)lateEventsCount/totalEventCount) != 0" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java</url>
-          <line>167</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/counters/CounterFunction.java</url>
           <line>16</line>
           <properties />
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -604,13 +687,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.4.2/flink-streaming-java_2.11-1.4.2.jar!/org/apache/flink/streaming/api/functions/source/RichSourceFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="92" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/moa/stream/ADWIN.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
@@ -620,13 +696,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/test/ADWINTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/PessimisticWatermarkEstimator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/StaticSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.4.2/flink-streaming-java_2.11-1.4.2.jar!/org/apache/flink/streaming/api/datastream/AllWindowedStream.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -648,13 +717,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/RawEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/RawEvent.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-cep_2.11/1.4.1/flink-cep_2.11-1.4.1.jar!/org/apache/flink/cep/pattern/Pattern.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -746,16 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/YetAnotherSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.6.0/flink-streaming-java_2.11-1.6.0.jar!/org/apache/flink/streaming/api/windowing/triggers/Trigger.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -777,15 +830,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJobTestWindowingSemantics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJobTestWindowingSemantics.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/Source.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.6.0/flink-streaming-java_2.11-1.6.0.jar!/org/apache/flink/streaming/api/operators/StreamSource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -800,37 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/IntervalEventGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/IntervalEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/BatchJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/triggers/EarlyCountEventTimeTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/IntervalEventGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/IntervalEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/BatchJob.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/triggers/EarlyCountEventTimeTrigger.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/PeriodicWaterMarkEstimator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
@@ -855,25 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/WatermarkEstimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/BoundedOutOfOrderWatermarkGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="50" column="110" selection-start-line="50" selection-start-column="110" selection-end-line="50" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/events/SimpleEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -882,13 +882,6 @@
             <element signature="e#953#954#0" expanded="true" />
             <element signature="e#1030#1031#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -929,84 +922,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/YetAnotherSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1077">
+          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/StaticSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/periodicassigners/BoundedOutOfOrderWatermarkGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/FileSourceWithoutWatermarkGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/AnalysisResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="68" column="178" selection-start-line="68" selection-start-column="178" selection-end-line="68" selection-end-column="178" />
+        <state relative-caret-position="935">
+          <caret line="79" column="89" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/DistancebasedAdaptiveWatermarkEstimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="171" column="24" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/WatermarkEstimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="43" column="114" selection-start-line="43" selection-start-column="114" selection-end-line="43" selection-end-column="114" />
           <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
-            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1921">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="171" column="63" selection-start-line="171" selection-start-column="63" selection-end-line="171" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/source/AdaptiveWatermarkGeneratorSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="79" column="45" lean-forward="true" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+        <state relative-caret-position="102">
+          <caret line="78" column="50" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3077#3078#0" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/AdaptiveWatermarkEstimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/adaptivewatermark/flink/StreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="210" column="25" lean-forward="true" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
+        <state relative-caret-position="304">
+          <caret line="587" lean-forward="true" selection-start-line="587" selection-end-line="587" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#AverageFunction#0;class#StreamingJob#0" />
-            <element signature="method#map#0;class#AverageFunction#0;class#StreamingJob#0" />
-            <element signature="method#open#0;class#AverageFunction#0;class#StreamingJob#0" />
-            <element signature="method#apply#0;class#AverageTemperatureFunction#0;class#StreamingJob#0" />
-            <element signature="class#CounterFunction3#0;class#StreamingJob#0" />
-            <element signature="class#CounterFunction2#0;class#StreamingJob#0" />
-            <element signature="e#13499#14368#0" expanded="true" />
-            <element signature="e#14367#14368#0" expanded="true" />
-            <element signature="method#jobForComparisonWithOtherEngines#0;class#StreamingJob#0" />
-            <element signature="method#jobForTestingCountWindow#0;class#StreamingJob#0" />
-            <element signature="method#jobForTestingSessionWindowWithOutOfOrder#0;class#StreamingJob#0" />
-            <element signature="method#jobForTestingTimeWindowWithOutOfOrder#0;class#StreamingJob#0" />
-            <element signature="e#21848#22717#0" expanded="true" />
-            <element signature="e#22716#22717#0" expanded="true" />
-            <marker date="1541401421508" expanded="true" signature="11343:11568" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ee/ut/cs/dsg/resultanalysis/ResultAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="10" column="96" lean-forward="true" selection-start-line="10" selection-start-column="96" selection-end-line="11" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3526#4857#0" />
+            <element signature="e#3701#4303#0" />
+            <element signature="e#4313#4851#0" />
+            <element signature="e#5012#5590#0" />
+            <element signature="e#6161#7127#0" />
+            <element signature="e#7133#7784#0" />
+            <element signature="e#7790#9058#0" />
+            <element signature="e#16210#17079#0" expanded="true" />
+            <element signature="e#17078#17079#0" expanded="true" />
+            <element signature="e#15803#16955#0" />
+            <element signature="e#16961#18111#0" />
+            <element signature="e#18117#19327#0" />
+            <element signature="e#19333#20441#0" />
+            <element signature="e#24820#25689#0" expanded="true" />
+            <element signature="e#25688#25689#0" expanded="true" />
+            <marker date="1541755807360" expanded="true" signature="10140:10365" ph="..." />
           </folding>
         </state>
       </provider>

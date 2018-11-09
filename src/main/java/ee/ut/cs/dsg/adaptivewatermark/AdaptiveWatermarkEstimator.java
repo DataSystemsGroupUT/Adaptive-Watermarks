@@ -168,8 +168,8 @@ public class AdaptiveWatermarkEstimator extends WatermarkEstimator{
 		System.out.println("Late arrival ratio "+ ((double)lateEventsCountPerChunk/totalEventCountPerChunk));
 		if (lastWatermark == 0 || ((lastWatermark < (minTimestamp - lateness)) && (((double)lateEventsCountPerChunk/totalEventCountPerChunk) < lateArrivalThreshold)))
 		{
-			lastWatermark = minTimestamp - lateness;
-
+			//lastWatermark = minTimestamp - lateness;
+			lastWatermark = maxTimestamp - maxAllowedLatness;//lateness;
 			if (continousAdaptationOfLateness)
 			{
 				maxAllowedLatness = maxDeviationPerChunk;

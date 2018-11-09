@@ -1,8 +1,6 @@
 package ee.ut.cs.dsg.adaptivewatermark.flink.source;
 
-import ee.ut.cs.dsg.adaptivewatermark.AdaptiveWatermarkEstimator;
-import ee.ut.cs.dsg.adaptivewatermark.PeriodicWaterMarkEstimator;
-import ee.ut.cs.dsg.adaptivewatermark.WatermarkEstimator;
+import ee.ut.cs.dsg.adaptivewatermark.*;
 import ee.ut.cs.dsg.adaptivewatermark.flink.events.SimpleEvent;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.watermark.Watermark;
@@ -77,6 +75,7 @@ public class AdaptiveWatermarkGeneratorSource implements SourceFunction<SimpleEv
         filePath = path;
         this.maxAllowedLateness = 1000;
         delay  =new Random();
+//       estimator = new DistancebasedAdaptiveWatermarkEstimator(sensitivityChangeRate,oooThreshold,sensitivityChangeRate,0);
         estimator = new AdaptiveWatermarkEstimator(sensitivity,sensitivityChangeRate,oooThreshold,maxAllowedLateness);
     }
     public long getCurrentWatermark()
@@ -94,7 +93,7 @@ public class AdaptiveWatermarkGeneratorSource implements SourceFunction<SimpleEv
             // the following play with timestamps is jut to put it near to the current time as some data are from 2013
             long firstIngestionTime = System.currentTimeMillis();
             long firstTimestamp = 0;
-            long transmissionDelay=2;
+//            long transmissionDelay=2;
             while (running && line != null)
             {
                 totalElements++;
@@ -118,14 +117,15 @@ public class AdaptiveWatermarkGeneratorSource implements SourceFunction<SimpleEv
                     firstTimestamp = ts;
                 }
 
-            //    se = new SimpleEvent(firstIngestionTime + (ts - firstTimestamp) , temperature);
+                se = new SimpleEvent(firstIngestionTime + (ts - firstTimestamp) , temperature,"1");
 
-                se = new SimpleEvent(ts  , temperature, "1");
+//                se = new SimpleEvent(ts  , temperature, "1");
 
                 sourceContext.collectWithTimestamp(se, se.getTimestamp());
-                int randomDelay = delay.nextInt((int)maxAllowedLateness);
+//                int randomDelay = delay.nextInt((int)maxAllowedLateness);
 
-                if (estimator.processEvent(se.getTimestamp(), se.getTimestamp() /*System.currentTimeMillis()*/+randomDelay))
+                //if (estimator.processEvent(se.getTimestamp(), se.getTimestamp() /*System.currentTimeMillis()*/+randomDelay))
+                if (estimator.processEvent(se.getTimestamp(), System.currentTimeMillis()))
                 {
                     // We need to generate the watermark
               //      if (estimator.getWatermark() > currentWatermark && currentWatermark != 0)

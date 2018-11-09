@@ -1,9 +1,7 @@
 ee\ut\cs\dsg\adaptivewatermark\flink\StreamingJob$CounterFunction3.class
-ee\ut\cs\dsg\adaptivewatermark\flink\StreamingJob$CounterFunction.class
 ee\ut\cs\dsg\adaptivewatermark\flink\StreamingJob.class
 ee\ut\cs\dsg\adaptivewatermark\WatermarkEstimator.class
 ee\ut\cs\dsg\adaptivewatermark\flink\StreamingJob$CounterFunction22.class
-ee\ut\cs\dsg\adaptivewatermark\WatermarkEstimator$WatermarkEstimatorType.class
 ee\ut\cs\dsg\adaptivewatermark\AdaptiveWatermarkEstimator.class
 ee\ut\cs\dsg\adaptivewatermark\flink\source\YetAnotherSource.class
 ee\ut\cs\dsg\adaptivewatermark\PeriodicWaterMarkEstimator$PeriodicWaterMarkUpdater.class

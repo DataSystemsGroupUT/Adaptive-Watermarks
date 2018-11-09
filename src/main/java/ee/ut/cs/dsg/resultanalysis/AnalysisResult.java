@@ -6,6 +6,7 @@ public class AnalysisResult {
     private long numberOfWindows;
     private double averageLagWindowEndWatermark;
     private long numberOfStreamElementsConsidered;
+    private long numberOfStreamElementsNotConsidered;
     private long paramAllowedLateness;
     private double paramSensitivity;
     private double paramSensitivityChangeRate;
@@ -15,7 +16,7 @@ public class AnalysisResult {
     private String inputFileName;
 
     public AnalysisResult(String inputFile, boolean isAdaptive, long numberOfWindows, double averageLagWindowEndWatermark
-    , long numberOfStreamElementsConsidered, long pAllowedLateness, double pSensitivity, double pSensitivityChangeRate, long pPeriodic, long pWindowWidth, double pOOOThreshold)
+    , long numberOfStreamElementsConsidered, long pAllowedLateness, double pSensitivity, double pSensitivityChangeRate, long pPeriodic, long pWindowWidth, double pOOOThreshold, long numberOfStreamElementsNotConsidered)
     {
         this.inputFileName = inputFile;
         this.isAdaptive = isAdaptive;
@@ -27,6 +28,7 @@ public class AnalysisResult {
         this.paramPeriodic = pPeriodic;
         this.paramWindoWidth = pWindowWidth;
         this.numberOfStreamElementsConsidered = numberOfStreamElementsConsidered;
+        this.numberOfStreamElementsNotConsidered = numberOfStreamElementsNotConsidered;
         this.paramOOOThreshold = pOOOThreshold;
     }
 
@@ -66,7 +68,7 @@ public class AnalysisResult {
 
     public static String getHeader()
     {
-        return "DataSet,Approach,Allowed Lateness, Sensitivity, Sensitivity Change Rate, OOO Threshold, Period, Window Width, Number Of Windows, Number of Elements, Average Lag";
+        return "DataSet,Approach,Allowed Lateness, Sensitivity, Sensitivity Change Rate, OOO Threshold, Period, Window Width, Number Of Windows, Number of Elements, Average Lag, Elements Not Processed";
     }
     @Override
     public String toString()
@@ -75,6 +77,6 @@ public class AnalysisResult {
         return inputFileName+","+(isAdaptive? "Adaptive":"Periodic")+","+paramAllowedLateness+","+paramSensitivity+","+paramSensitivityChangeRate
                 +","+paramOOOThreshold+","+paramPeriodic+","+paramWindoWidth
                 +","+numberOfWindows+","+numberOfStreamElementsConsidered
-                +","+averageLagWindowEndWatermark;
+                +","+averageLagWindowEndWatermark+","+numberOfStreamElementsNotConsidered;
     }
 }

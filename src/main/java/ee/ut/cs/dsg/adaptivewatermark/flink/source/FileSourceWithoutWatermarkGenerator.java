@@ -38,6 +38,8 @@ public class FileSourceWithoutWatermarkGenerator implements SourceFunction<Simpl
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String line;
             line = reader.readLine();
+            long firstIngestionTime = System.currentTimeMillis();
+            long firstTimestamp = 0;
             while (running && line != null)
             {
                 SimpleEvent se;
@@ -54,8 +56,11 @@ public class FileSourceWithoutWatermarkGenerator implements SourceFunction<Simpl
                     ts = Long.parseLong(data[0]);
                     temperature = Math.round(((random.nextGaussian()*5)+20)*100.0)/100.0;
                 }
-
-                se = new SimpleEvent(ts, temperature, "1");
+                if (firstTimestamp == 0)
+                {
+                    firstTimestamp = ts;
+                }
+                se = new SimpleEvent(firstIngestionTime + (ts - firstTimestamp), temperature, "1");
 
                 sourceContext.collect(se);
 
