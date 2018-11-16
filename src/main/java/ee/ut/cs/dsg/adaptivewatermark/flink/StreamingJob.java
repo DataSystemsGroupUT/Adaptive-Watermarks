@@ -193,50 +193,47 @@ public class StreamingJob {
     }
 
     public static void main(String[] args) throws Exception {
-        bulklyRun();
+        //   bulklyRun();
 
-//        ParameterTool parameters = ParameterTool.fromArgs(args);
-//        String inputFile, outputFile;
-//        boolean adaptive = parameters.getBoolean("adaptive", true);
-//        inputFile = parameters.getRequired("input");
-//
-//        outputFile = parameters.get("output", "outputFile" + (adaptive ? "Adaptive" : "Periodic"));
-//        long maxAllowedLateness = parameters.getLong("allowedLateness", 0);
-//        double oooThreshold = parameters.getDouble("oooThreshold", 1.1);
-//        double sensitivity = parameters.getDouble("sensitivity", 1);
-//        double sensitivityChangeRate = parameters.getDouble("sensitivityChangeRate", 1);
-//        long windowWidth = parameters.getLong("windowWidth", 100);
-//        long period = parameters.getLong("period", 200L);
-//
-//        // static tests
-//
-//
-////		jobForArrivalRate();
-//        if (adaptive)
-//            jobWithAdaptiveWatermarkGeneratorSource(inputFile, outputFile,
-//                    maxAllowedLateness, oooThreshold, sensitivity, sensitivityChangeRate, windowWidth);
-//        else
-//            jobWithPeriodicWatermarkGenerator(inputFile, outputFile, maxAllowedLateness, period, windowWidth, 0);
+        ParameterTool parameters = ParameterTool.fromArgs(args);
+        String inputFile, outputFile;
+        boolean adaptive = parameters.getBoolean("adaptive", true);
+        inputFile = parameters.getRequired("input");
+
+        outputFile = parameters.get("output", "outputFile" + (adaptive ? "Adaptive" : "Periodic"));
+        long maxAllowedLateness = parameters.getLong("allowedLateness", 0);
+        double oooThreshold = parameters.getDouble("oooThreshold", 1.1);
+        double sensitivity = parameters.getDouble("sensitivity", 1);
+        double sensitivityChangeRate = parameters.getDouble("sensitivityChangeRate", 1);
+        long windowWidth = parameters.getLong("windowWidth", 100);
+        long period = parameters.getLong("period", 200L);
+
+        // static tests
+
+
+//		jobForArrivalRate();
+        if (adaptive)
+            jobWithAdaptiveWatermarkGeneratorSource(inputFile, outputFile,
+                    maxAllowedLateness, oooThreshold, sensitivity, sensitivityChangeRate, windowWidth);
+        else
+            jobWithPeriodicWatermarkGenerator(inputFile, outputFile, maxAllowedLateness, period, windowWidth, 0);
 
 
     }
 
 
-    public static void bulklyRun() throws Exception{
+    public static void bulklyRun(String inputFile) throws Exception {
         double[] snssss = {1};//,0.1,0.01};
         double[] snsChangeRates = {1, 0.1, 0.01};
         double[] oooThresholds = {1.1, 0.1, 0.01};
         long[] winWidths = {/*60*60*1000,*/ 100, 1000};//{100, 1000};
         long[] periods = {200, 10};
         long[] lateness = {100, 1000};
-        String[] inputFiles = {"C:\\Work\\Data\\DEBSGC2015TSOnly_part_1_Milliseconds.txt",
-                "C:\\Work\\Data\\DEBSGC2012TSOnlyMillisRecent.txt"};
-//        inputFiles[1] = "C:\\Work\\Data\\SensorTimeStampRealCompleteMilliseconds.txt";
-//        inputFiles[2] = "C:\\Work\\Data\\Tromso2013Milliseconds.txt";
-//        inputFiles[3] = "C:\\Work\\Data\\DEBSGC2012TSOnlyMillis.txt";
+        String[] inputFiles = {inputFile};
+
         long suggestedWaiting = 92672393L;
         long windowWidth;
-        long maxAllowedLateness=1000;
+        long maxAllowedLateness = 1000;
         long period = 200;
         for (String f : inputFiles) {
             String oFile = f.substring(0, f.indexOf(".") - 1);
@@ -261,51 +258,25 @@ public class StreamingJob {
 
                 }
             }
-//            for (long p : periods) {
-//                period = p;
-//                for (long l : lateness) {
-//                    maxAllowedLateness = l;
-//                    for (long w : winWidths) {
-//                        windowWidth = w;
-//
-//                        String ofilePeriodic = oFile + "Periodic" + "L-" + maxAllowedLateness + "P-" + period + "W-" + windowWidth + ".txt";
-//                        file = new File(ofilePeriodic);
-//                        if (!file.exists() && !file.isDirectory()) {
-//                            jobWithPeriodicWatermarkGenerator(f, ofilePeriodic, maxAllowedLateness
-//                                    , period, windowWidth, suggestedWaiting);
-//                        }
-//                    }
-//                }
-//            }
+            for (long p : periods) {
+                period = p;
+                for (long l : lateness) {
+                    maxAllowedLateness = l;
+                    for (long w : winWidths) {
+                        windowWidth = w;
+
+                        String ofilePeriodic = oFile + "Periodic" + "L-" + maxAllowedLateness + "P-" + period + "W-" + windowWidth + ".txt";
+                        file = new File(ofilePeriodic);
+                        if (!file.exists() && !file.isDirectory()) {
+                            jobWithPeriodicWatermarkGenerator(f, ofilePeriodic, maxAllowedLateness
+                                    , period, windowWidth, suggestedWaiting);
+                        }
+                    }
+                }
+            }
         }
     }
-    //	private static void jobForArrivalRate() throws Exception
-//	{
-//		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-//		env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-//		env.setParallelism(1);
-//
-//		DataStream<SimpleEvent>  stream = env.addSource(new AdaptiveWatermarkGeneratorSource("C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013Milliseconds.txt"));
-//
-//		DataStream<Tuple2<TimeWindow, Long>> arrivalPerSecond =
-//		stream.windowAll(TumblingEventTimeWindows.of(Time.seconds(1)))
-//				.allowedLateness(Time.days(10))
-//
-//				.apply(new CounterFunction());
-//		DataStream<String> averageItemsPerWindow = arrivalPerSecond.map(new MapFunction<Tuple2<TimeWindow,Long>, Tuple2<Integer,Long>>() {
-//			@Override
-//			public Tuple2<Integer, Long> map(Tuple2<TimeWindow, Long> timeWindowLongTuple2) throws Exception {
-//				return new Tuple2<>(1,timeWindowLongTuple2.f1);
-//			}
-//		})
-//		.keyBy(0)
-//		.map(new AverageFunction());
-//
-//		//stream.print();
-//
-//		averageItemsPerWindow.print();
-//		env.execute("Flink Streaming Java API Skeleton");
-//	}
+
     private static void jobWithAdaptiveWatermarkGeneratorSource(String inputFile, String outputFile,
                                                                 long allowedLateness, double oooThreshold, double sensitivity,
                                                                 double sensitivityChangeRate, long windowWidth) throws Exception {
@@ -316,12 +287,7 @@ public class StreamingJob {
         executionConfig.setAutoWatermarkInterval(0);
         executionConfig.enableSysoutLogging();
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
-//		DataStream<SimpleEvent> stream = env.addSource(new FileSource("C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013MillisecondsWithTempReadingsSorted.csv"
-//                ,1000,1.1, 1.0));
 
-        // DataStream<SimpleEvent> stream = env.addSource(new AdaptiveWatermarkGeneratorSource("C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013MillisecondsWithTempReadings.csv"
-//		long watermark=0;
         AdaptiveWatermarkGeneratorSource src = new AdaptiveWatermarkGeneratorSource(inputFile
                 , allowedLateness, oooThreshold, sensitivity, sensitivityChangeRate);
         DataStream<SimpleEvent> stream = env.addSource(src);
@@ -355,106 +321,10 @@ public class StreamingJob {
 
         //System.out.println("Total number of generated watermarks "+src.getNumberOfGeneratedWatermarks());
 //
-       JobExecutionResult result =  env.execute("Flink streaming with adaptive watermark generation");
+        JobExecutionResult result = env.execute("Flink streaming with adaptive watermark generation");
 
     }
 
-    private static void jobForComparisonWithOtherEngines() throws Exception {
-        // set up the streaming execution environment
-
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        ExecutionConfig executionConfig = env.getConfig();
-        env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
-//		DataStream<SimpleEvent> stream = env.addSource(new FileSource("C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013MillisecondsWithTempReadingsSorted.csv"
-//                ,1000,1.1, 1.0));
-
-        DataStream<Tuple3<Long, String, Double>> stream = env.addSource(new YetAnotherSource("Data.csv"));
-
-//		stream.timeWindowAll(Time.milliseconds(100), Time.milliseconds(10)).apply(new CounterFunction3()).writeAsText("forComparisonWithSpark.txt", FileSystem.WriteMode.OVERWRITE);
-        stream.windowAll(EventTimeSessionWindows.withGap(Time.milliseconds(10))).apply(new CounterFunction3()).writeAsText("FlinkSessionWindowOutputForData.csv.txt", FileSystem.WriteMode.OVERWRITE);
-//
-        env.execute("Flink Streaming Java API Skeleton");
-    }
-
-    private static void jobForTestingCountWindow() throws Exception {
-        // set up the streaming execution environment
-
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        ExecutionConfig executionConfig = env.getConfig();
-        env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
-
-
-        DataStream<Tuple3<Long, String, Double>> stream = env.addSource(new StaticSource());
-
-//		stream.timeWindowAll(Time.milliseconds(100), Time.milliseconds(10)).apply(new CounterFunction3()).writeAsText("forComparisonWithSpark.txt", FileSystem.WriteMode.OVERWRITE);
-        stream //.timeWindowAll(Time.milliseconds(100),Time.milliseconds(10))
-
-
-                .countWindowAll(4, 2)
-                .allowedLateness(Time.milliseconds(0))
-                //.trigger(CountTrigger.of(1))
-//				.sideOutputLateData()
-                .apply(new CounterFunction22())
-
-
-                .writeAsText("FlinkCountWindowOutputForStaticSource.txt", FileSystem.WriteMode.OVERWRITE);
-//
-        env.execute("Flink Streaming Session window with out of order arrival");
-    }
-
-    private static void jobForTestingSessionWindowWithOutOfOrder() throws Exception {
-        // set up the streaming execution environment
-
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        ExecutionConfig executionConfig = env.getConfig();
-        env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
-
-
-        DataStream<Tuple3<Long, String, Double>> stream = env.addSource(new StaticSource());
-
-//		stream.timeWindowAll(Time.milliseconds(100), Time.milliseconds(10)).apply(new CounterFunction3()).writeAsText("forComparisonWithSpark.txt", FileSystem.WriteMode.OVERWRITE);
-        stream //.timeWindowAll(Time.milliseconds(100),Time.milliseconds(10))
-
-
-                .windowAll(EventTimeSessionWindows.withGap(Time.milliseconds(10)))
-                .allowedLateness(Time.milliseconds(0))
-                .trigger(CountTrigger.of(1))
-//				.sideOutputLateData()
-                .apply(new CounterFunction3())
-
-
-                .writeAsText("FlinkSessionWindowOutputForStaticSource.txt", FileSystem.WriteMode.OVERWRITE);
-//
-        env.execute("Flink Streaming Session window with out of order arrival");
-    }
-
-    private static void jobForTestingTimeWindowWithOutOfOrder() throws Exception {
-        // set up the streaming execution environment
-
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        ExecutionConfig executionConfig = env.getConfig();
-        env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
-
-
-        DataStream<Tuple3<Long, String, Double>> stream = env.addSource(new StaticSource());
-
-//		stream.timeWindowAll(Time.milliseconds(100), Time.milliseconds(10)).apply(new CounterFunction3()).writeAsText("forComparisonWithSpark.txt", FileSystem.WriteMode.OVERWRITE);
-        stream.timeWindowAll(Time.milliseconds(50))
-
-
-                //.windowAll(EventTimeSessionWindows.withGap(Time.milliseconds(100)))
-                .allowedLateness(Time.milliseconds(0))
-                .apply(new CounterFunction3())
-
-
-                .writeAsText("FlinkTimeWindowOutputForStaticSource.txt", FileSystem.WriteMode.OVERWRITE);
-//
-        env.execute("Flink Streaming Session window with out of order arrival");
-    }
 
     private static void jobWithPeriodicWatermarkGenerator(String inputFile, String outputFile, long maxOOO, long period, long windowWidth, long waiting) throws Exception {
         // set up the streaming execution environment
@@ -464,45 +334,16 @@ public class StreamingJob {
 
         executionConfig.disableSysoutLogging();
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        env.setParallelism(1);
+    //    env.setParallelism(1);
 
         executionConfig.setAutoWatermarkInterval(period);
         executionConfig.enableSysoutLogging();
 
-        //String filePath = "C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013MillisecondsWithTempReadings.csv";
-        //String filePath = "C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\DEBSGC2012TSOnlyMillisRecent.txt";
-        // DataStream<String> rawStream = env.readTextFile(inputFile);
 
         DataStream<SimpleEvent> rawStream = env.addSource(new FileSourceWithoutWatermarkGenerator(inputFile));
         BoundedOutOfOrderWatermarkGenerator tsAssigner = new BoundedOutOfOrderWatermarkGenerator(maxOOO);
 
-//        DataStream<SimpleEvent> stream = rawStream.map(new MapFunction<String, SimpleEvent>() {
-//            long firstIngestionTime = System.currentTimeMillis();
-//            long firstTimestamp = 0;
-//
-//            @Override
-//            public SimpleEvent map(String s) throws Exception {
-//                SimpleEvent se;
-//                long ts;
-//                double temperature;
-//                Random random = new Random();
-//                String[] data = s.split(",");
-//
-//                if (data.length == 2) {
-//                    ts = Long.parseLong(data[0]);
-//                    temperature = Double.parseDouble(data[1]);
-//                } else {
-//                    ts = Long.parseLong(data[0]);
-//                    temperature = Math.round(((random.nextGaussian() * 5) + 20) * 100.0) / 100.0;
-//                }
-//                if (firstTimestamp == 0) {
-//                    firstTimestamp = ts;
-//                }
-//                 se = new SimpleEvent(firstIngestionTime + (ts - firstTimestamp), temperature, "1");
-//                //se = new SimpleEvent(ts, temperature, "1");
-//                return se;
-//            }
-//        })
+
         rawStream.assignTimestampsAndWatermarks(tsAssigner).keyBy(new KeySelector<SimpleEvent, String>() {
 
             @Override
@@ -519,69 +360,17 @@ public class StreamingJob {
                                      count++;
                                  }
 
-                                 //System.out.println("Num elements in Window ("+window.getStart()+","+window.getEnd()+") is "+count);
+
                                  collector.collect(new Tuple3<>(context.window(), Long.valueOf(count), context.currentWatermark() - context.window().getEnd()));
                              }
                          }
                 ).writeAsText(outputFile, FileSystem.WriteMode.OVERWRITE);
 
-//
+
         env.execute("Flink Streaming Java API Skeleton");
 
-//		System.out.println("Total OOO Arrival "+tsAssigner.totalOOOElements+" of total elements "+tsAssigner.totalElements +" with percentage "+(double)tsAssigner.totalOOOElements/tsAssigner.totalElements);
-//		System.out.println("Total number of generated watermarks" + tsAssigner.getNumberOfGeneratedWatermarks());
+
     }
 
-//	private static void jobWithTriggersAndEvictors() throws Exception
-//	{
-//		// set up the streaming execution environment
-//
-//		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-//		ExecutionConfig executionConfig = env.getConfig();
-//
-//		executionConfig.disableSysoutLogging();
-//		env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-//		env.setParallelism(1);
-//
-//
-//
-//		String filePath = "C:\\Users\\Ahmed Awad\\eclipse-workspace\\ADWinOriginal\\Tromso2013MillisecondsWithTempReadings.csv";
-//		DataStream<String> rawStream = env.readTextFile(filePath);
-//
-//
-//		DataStream<SimpleEvent> stream = rawStream.map(new MapFunction<String, SimpleEvent>() {
-//			@Override
-//			public SimpleEvent map(String s) throws Exception {
-//				SimpleEvent se;
-//				long ts; double temperature;
-//				Random random = new Random();
-//				String[] data = s.split(",");
-//
-//				if (data.length == 2)
-//				{
-//					ts = Long.parseLong(data[0]);
-//					temperature = Double.parseDouble(data[1]);
-//				}
-//				else
-//				{
-//					ts = Long.parseLong(data[0]);
-//					temperature = Math.round(((random.nextGaussian()*5)+20)*100.0)/100.0;
-//				}
-//				se = new SimpleEvent(ts, temperature);
-//				return se;
-//			}
-//		}).assignTimestampsAndWatermarks(new BoundedOutOfOrdernessWatermarkGenerator());
-//
-//		//stream.timeWindowAll(Time.milliseconds(100))
-//		stream.countWindowAll(10,1)
-////				.trigger(CountTrigger.of(5))// This one is overwritten
-////				.trigger(CountTrigger.of(6))
-//				//.trigger(ContinuousEventTimeTrigger.of(Time.milliseconds(10)))
-//				//.evictor(CountEvictor.of(2,false))// It will keep the number specified and remove the others, but which ones?
-//				//.evictor(TimeEvictor.of(Time.milliseconds(10),true))
-//				.apply(new CounterFunction2()).writeAsText("outputForCountEvictorCounterWindow.txt", FileSystem.WriteMode.OVERWRITE);
-//
-////
-//		env.execute("Flink Streaming Java API Skeleton");
-//	}
+
 }

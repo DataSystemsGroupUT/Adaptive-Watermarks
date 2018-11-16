@@ -75,7 +75,7 @@ public class AdaptiveWatermarkGeneratorSource implements SourceFunction<SimpleEv
         filePath = path;
         this.maxAllowedLateness = 1000;
         delay  =new Random();
-//       estimator = new DistancebasedAdaptiveWatermarkEstimator(sensitivityChangeRate,oooThreshold,sensitivityChangeRate,0);
+
         estimator = new AdaptiveWatermarkEstimator(sensitivity,sensitivityChangeRate,oooThreshold,maxAllowedLateness);
     }
     public long getCurrentWatermark()
